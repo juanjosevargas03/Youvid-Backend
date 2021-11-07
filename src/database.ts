@@ -9,7 +9,7 @@ import config from "./config";
       useNewUrlParser: true,
     };
     const db = await mongoose.connect(
-      `mongodb://${config.MONGO_HOST}/${config.MONGO_DATABASE}`,
+      config.MONGO_URI,
       mongooseOptions
     );
 
